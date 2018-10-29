@@ -15,11 +15,11 @@ export default {
   },
   methods: {
     getArticle() {
-    //   this.$http.get('/api/getArticle')
-    //     .then( (res) => {
-    //       console.log('res', res);
-    //       this.inpContent = res.data.data;
-    //     })
+      this.$http.get('/api/getArticle')
+        .then( (res) => {
+          console.log('res', res);
+          this.inpContent = res.data.data;
+        })
     }
   }
 }
