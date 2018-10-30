@@ -9,6 +9,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 
+app.use(function(res){
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  res.header('Access-Control-Allow-Credentials','true');
+  next();
+})
+
+
 app.get('/api/getArticle', (req, res, next) => {
   res.json({
       data: '后台返回结果 getArticle OP'
