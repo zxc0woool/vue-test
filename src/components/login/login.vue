@@ -28,8 +28,7 @@ export default {
 
       var age = this.age;
       this.$http
-        .post(
-          "/api/user/user",
+        .post(process.env.API_HOST + "user/user",
           {
             username: name,
             age: age

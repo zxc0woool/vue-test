@@ -16,7 +16,7 @@
         <router-link to="/login">login跳转</router-link>
         <!-- <el-menu-item index="login"></el-menu-item> -->
         <child v-bind:name="msg"></child>
-
+        <blog></blog>
         <home></home>
       </li>
     </ul>

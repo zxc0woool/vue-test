@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     getArticle() {
-      this.$http.get('/api/getArticle')
+      this.$http.get(process.env.API_HOST+'getArticle')
         .then( (res) => {
           console.log('res', res);
           this.inpContent = res.data.data;
