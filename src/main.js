@@ -9,6 +9,11 @@ import 'element-ui/lib/theme-chalk/index.css'
 import './custom/directive'; // 自定义指令
 import './custom/assembly'; //自定义组件
 
+import index from './components/pages/index'
+
+Vue.use(index);
+
+
 Vue.config.productionTip = false
 Vue.use(ElementUI);
 Vue.prototype.$http = axios;
