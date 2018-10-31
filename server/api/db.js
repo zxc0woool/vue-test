@@ -8,7 +8,7 @@ var models = {
         port: '3701',
         user: 'kylin',
         password: 'Kylin_2014_NJ',
-        database: 'mysql'
+        database: 'test'
 
     }
 
