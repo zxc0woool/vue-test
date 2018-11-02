@@ -1,10 +1,11 @@
 'use strict'
+const webpack = require('webpack')
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
@@ -31,12 +32,19 @@ module.exports = {
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "windows.jQuery": "jquery"
+    })
+  ],
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       '@': resolve('src'),
       //指定 vue.js 的路径
-      'vue$':'vue/dist/vue.js'
+      'vue$': 'vue/dist/vue.js'
     }
   },
   module: {
